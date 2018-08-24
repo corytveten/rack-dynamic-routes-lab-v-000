@@ -13,6 +13,7 @@ class Application
       if item = @@items.find do |i|
         i.name == item_name
       end
+      resp.write item.price
     else
       resp.write "Route not found"
       resp.status = 404
